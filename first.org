@@ -51,3 +51,18 @@ I want to use:
   Dr. Knight shows a workflow having markdown as source format. Also
   uses ~sage~ for producing images.
 
+- [[http://bowenli37.wordpress.com/tag/org-exp-bibtex/][org-exp-bibtex | Sail Home]] A post describing the use of
+  ~org-exp-bibtex~, which has been removed from org-mode, as seen in:
+  [[http://thread.gmane.org/gmane.emacs.orgmode/67488/focus%3D67839][org-exp-bibtex missing in git?]] From that thread, this post by Eric
+  Fraga seems to be useful: [[http://thread.gmane.org/gmane.emacs.orgmode/67488/focus%3D67839][org-exp-bibtex missing in git?]] as this by
+  Rasmus: [[http://thread.gmane.org/gmane.emacs.orgmode/67488/focus%3D67839][org-exp-bibtex missing in git?]] BTW, this might be the
+  origin of all the code using bibtex in org: [[http://article.gmane.org/gmane.emacs.orgmode/2406/match%3Dbibliography][dealing with a bibliography]]
+
+- Eric's suggestion apparently uses ~ebib~: [[https://github.com/joostkremers/ebib][joostkremers/ebib · GitHub]]
+
+- About pandoc: [[http://chronicle.com/blogs/profhacker/pandoc-converts-all-your-text-documents][Pandoc Converts All Your (Text) Documents -
+  ProfHacker]] and [[http://chronicle.com/blogs/profhacker/make-your-own-e-books-with-pandoc][Make Your Own E-Books with Pandoc - ProfHacker]]
+
+** github
+
+- [[http://rvf0068.github.io/org-document-test/][Which is a good format to make documents?]] The github page of this document...
