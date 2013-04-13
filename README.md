@@ -48,6 +48,24 @@ I want to use:
 
 # Resources
 
-## In emacs
+## In blogs
 
--   `org-mode` can export to several formats
+-   [Makefiles for tikz sagemath and teaching notes written in markdown](http://drvinceknight.blogspot.mx/2013/04/makefiles-for-tikz-sagemath-and.html)
+    Dr. Knight shows a workflow having markdown as source format. Also
+    uses `sage` for producing images.
+
+-   [org-exp-bibtex | Sail Home](http://bowenli37.wordpress.com/tag/org-exp-bibtex/) A post describing the use of
+    `org-exp-bibtex`, which has been removed from org-mode, as seen in:
+    [org-exp-bibtex missing in git?](http://thread.gmane.org/gmane.emacs.orgmode/67488/focus=67839) From that thread, this post by Eric
+    Fraga seems to be useful: [org-exp-bibtex missing in git?](http://thread.gmane.org/gmane.emacs.orgmode/67488/focus=67839) as this by
+    Rasmus: [org-exp-bibtex missing in git?](http://thread.gmane.org/gmane.emacs.orgmode/67488/focus=67839) BTW, this might be the
+    origin of all the code using bibtex in org: [dealing with a bibliography](http://article.gmane.org/gmane.emacs.orgmode/2406/match=bibliography)
+
+-   Eric's suggestion apparently uses `ebib`: [joostkremers/ebib · GitHub](https://github.com/joostkremers/ebib)
+
+-   About pandoc: [Pandoc Converts All Your (Text) Documents -
+    ProfHacker](http://chronicle.com/blogs/profhacker/pandoc-converts-all-your-text-documents) and [Make Your Own E-Books with Pandoc - ProfHacker](http://chronicle.com/blogs/profhacker/make-your-own-e-books-with-pandoc)
+
+## github
+
+-   [Which is a good format to make documents?](http://rvf0068.github.io/org-document-test/) The github page of this document&#x2026;
