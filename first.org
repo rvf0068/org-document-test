@@ -45,6 +45,9 @@ I want to use:
 
 * Resources
 
-** In emacs
+** In blogs
 
-- ~org-mode~ can export to several formats
+- [[http://drvinceknight.blogspot.mx/2013/04/makefiles-for-tikz-sagemath-and.html][Makefiles for tikz sagemath and teaching notes written in markdown]]
+  Dr. Knight shows a workflow having markdown as source format. Also
+  uses ~sage~ for producing images.
+
