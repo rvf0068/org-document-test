@@ -20,6 +20,7 @@ I want to use:
 
   #+caption: A test image
   #+attr_latex: :width 3cm
+  #+attr_html: :align center
   [[./clock.png]]
   
   Apparently one has to have a blank line so that the image looks
@@ -42,6 +43,13 @@ I want to use:
 - theorems, definitions, etc.
 - references, to a bibliographic resource or to another theorem
   previously stated.
+- tables, say:
+
+  #+caption: This is a test table
+  #+attr_html: :options frame="border"
+  | a | b | c |
+  |---+---+---|
+  | x | y | z |
 
 * Resources
 
@@ -57,11 +65,21 @@ I want to use:
   Fraga seems to be useful: [[http://thread.gmane.org/gmane.emacs.orgmode/67488/focus%3D67839][org-exp-bibtex missing in git?]] as this by
   Rasmus: [[http://thread.gmane.org/gmane.emacs.orgmode/67488/focus%3D67839][org-exp-bibtex missing in git?]] BTW, this might be the
   origin of all the code using bibtex in org: [[http://article.gmane.org/gmane.emacs.orgmode/2406/match%3Dbibliography][dealing with a bibliography]]
-
 - Eric's suggestion apparently uses ~ebib~: [[https://github.com/joostkremers/ebib][joostkremers/ebib · GitHub]]
 
 - About pandoc: [[http://chronicle.com/blogs/profhacker/pandoc-converts-all-your-text-documents][Pandoc Converts All Your (Text) Documents -
   ProfHacker]] and [[http://chronicle.com/blogs/profhacker/make-your-own-e-books-with-pandoc][Make Your Own E-Books with Pandoc - ProfHacker]]
+
+** blogs in org
+
+- [[http://orgmode.org/worg/org-blog-wiki.html][Org Blogs and Wikis]]
+- Publishing in info: [[info:org#Publishing]]
+- A thread in the mailing list: [[http://comments.gmane.org/gmane.emacs.orgmode/45360][Org-Mode for GNU Emacs]]
+- A question: [[http://stackoverflow.com/questions/8025703/how-to-create-a-personal-wikiblog-on-github-using-org-mode][How to create a personal wiki+blog on github using org-mode?]]
+- [[https://github.com/renard/o-blog][renard/o-blog · GitHub]], the page: [[http://renard.github.io/o-blog/][Quick start Guide]]
+- More on blogging from org: [[http://jaderholm.com/blog/blogging-with-org-mode-and-octopress][Scott Jaderholm: Blogging With Org-mode and Octopress]]
+- [[http://blog.paphus.com/blog/2012/08/01/introducing-octopress-blogging-for-org-mode/][Introducing Octopress Blogging for Org-Mode - On Programming]], the
+  repo: [[https://github.com/craftkiller/orgmode-octopress][craftkiller/orgmode-octopress · GitHub]]
 
 ** github
 
