@@ -7,6 +7,15 @@
 #+latex_header: \newtheorem{definition}{Definition}
 
 #+LaTeX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue}
+
+#+latex_header: \lstset{%
+#+latex_header:     basicstyle=\ttfamily,
+#+latex_header:     commentstyle=\itshape\ttfamily,
+#+latex_header:     showspaces=false,
+#+latex_header:     showstringspaces=false,
+#+latex_header:     breaklines=true,
+#+latex_header:     breakautoindent=true,
+#+latex_header:   }
 * The problem
 
 I want to have a format that I can convert to ~pdf, html~, and maybe
