@@ -1,9 +1,12 @@
 #+title: Which is a good format to make documents?
 #+options: toc:nil
+# #+options: toc:nil tex:imagemagick
+
 #+latex_header: \usepackage{amsthm}
 #+latex_header: \newtheorem{theorem}{Theorem}
 #+latex_header: \newtheorem{definition}{Definition}
 
+#+LaTeX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue}
 * The problem
 
 I want to have a format that I can convert to ~pdf, html~, and maybe
