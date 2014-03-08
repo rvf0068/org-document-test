@@ -1,5 +1,4 @@
 #+title: Which is a good format to make documents?
-#+options: toc:nil
 # #+options: toc:nil tex:imagemagick
 
 #+latex_header: \usepackage{amsthm}
@@ -16,6 +15,7 @@
 #+latex_header:     breaklines=true,
 #+latex_header:     breakautoindent=true,
 #+latex_header:   }
+
 * The problem
 
 I want to have a format that I can convert to ~pdf, html~, and maybe
@@ -27,6 +27,8 @@ I want to have a format that I can convert to ~pdf, html~, and maybe
 One thing I like about org is that it is rather simple, and the
 documents look clean. I do not like that it seems to change
 constantly and that it is not as universally known as LaTeX.
+
+* Requirements
 
 I want to use:
 
@@ -41,6 +43,9 @@ I want to use:
   Apparently one has to have a blank line so that the image looks
   OK. Also, with a caption, the image is centered both in LaTeX and
   HTML export.
+
+* Other requirements
+
 - code, say
   #+begin_src python
     def test(a):
@@ -52,19 +57,33 @@ I want to use:
   #+end_src
 - math symbols, say \(a^{2}+b^{2}=c^{2}\)
 - displayed equations, like:
+
+  #+NAME: the-equation
   \begin{equation}
   a^{2}+b^{2}=c^{2}
   \end{equation}
+
+* Theorems
+
 - theorems, definitions, etc.
+
+  #+name: thm-1
+  #+begin_theorem
+  There are infinite prime numbers \(p\).
+  #+end_theorem
+
 - references, to a bibliographic resource or to another theorem
   previously stated.
 - tables, say:
 
   #+caption: This is a test table
-  #+attr_html: :options frame="border"
+  #+NAME: the-table
+  #+attr_latex: :align |c|c|c|
+  |---+---+---|
   | a | b | c |
   |---+---+---|
   | x | y | z |
+  |---+---+---|
 
 * Resources
 
@@ -99,3 +118,9 @@ I want to use:
 ** github
 
 - [[http://rvf0068.github.io/org-document-test/][Which is a good format to make documents?]] The github page of this document...
+
+* References
+
+** To the equation
+
+We reference equation [[the-equation]] and table [[the-table]] and Theorem [[thm-1]]
