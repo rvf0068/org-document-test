@@ -1,5 +1,8 @@
 #+title: Which is a good format to make documents?
 #+options: toc:nil
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \newtheorem{theorem}{Theorem}
+#+latex_header: \newtheorem{definition}{Definition}
 
 * The problem
 
