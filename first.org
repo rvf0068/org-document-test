@@ -16,6 +16,8 @@
 #+latex_header:     breakautoindent=true,
 #+latex_header:   }
 
+
+
 * The problem
 
 I want to have a format that I can convert to ~pdf, html~, and maybe
@@ -124,3 +126,10 @@ I want to use:
 ** To the equation
 
 We reference equation [[the-equation]] and table [[the-table]] and Theorem [[thm-1]]
+
+** To books
+
+We cite [[cite:posetfiber]] and [[cite:MR86d:00001]]
+
+#+BIBLIOGRAPHY: ./bibliotest plain limit:t
+
