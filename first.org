@@ -24,10 +24,11 @@ constantly and that it is not as universally known as LaTeX.
 I want to use:
 
 - links, say [[http://google.com][Google]].
-- images, say
+- images, say the one in Figure [[clock]].
 
+  #+name: clock
   #+caption: A test image
-  #+attr_latex: :width 3cm
+  #+attr_latex: :width 5cm
   #+attr_html: :align center
   [[./clock.png]]
   
@@ -70,6 +71,7 @@ I want to use:
   #+caption: This is a test table
   #+NAME: the-table
   #+attr_latex: :align |c|c|c|
+  #+attr_html: :align center
   |---+---+---|
   | a | b | c |
   |---+---+---|
@@ -114,11 +116,37 @@ I want to use:
 
 ** To the equation
 
-We reference equation [[the-equation]] and table [[the-table]] and Theorem [[thm-1]]
+We reference equation [[the-equation]] and table [[the-table]] and Theorem
+[[thm-1]] and Figure [[clock]].
 
 ** To books
 
-We cite [[cite:posetfiber]] and [[cite:MR86d:00001]]
+   We cite [[cite:posetfiber]] and [[cite:MR86d:00001]]. Let us also cite [[cite:MR2522486]].
+
+   Note that to export bibliographies to html, one has to install
+   ~bibtex2html~. For ~bibtex2html~ to work, we need to add
+   #+BEGIN_EXAMPLE
+     openout_any = a
+   #+END_EXAMPLE
+   to the local ~texmf.cnf~ file, say
+   ~/usr/local/texlive/2014/texmf.cnf~. Care has to be taken that the
+   last line has a line ending character, see [[http://www.tug.org/pipermail/tex-live/2013-May/033608.html][{tex-live} texmf.cnf
+   ignored]].
+
+** State of the references
+   Currently, on [2014-08-10 Sun], with org-version:
+   #+BEGIN_EXAMPLE
+     Org-mode version 8.3beta (release_8.3beta-211-gb3fbd3 @ /home/rafael/.emacs.d/site-lisp/org-mode/lisp/)
+   #+END_EXAMPLE
+
+   #+attr_html: :align center
+   |           | pdf   | html  |
+   |-----------+-------+-------|
+   | figures   | works | works |
+   | equations | works |       |
+   | tables    | works | works |
+   | theorems  | works |       |
+   | biblio    | works | works |
 
 #+BIBLIOGRAPHY: ./bibliotest plain limit:t
 
