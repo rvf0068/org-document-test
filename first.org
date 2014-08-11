@@ -1,5 +1,5 @@
 #+title: Which is a good format to make documents?
-# #+options: toc:nil tex:imagemagick
+#+options: toc:nil tex:imagemagick
 # #+property: cache yes 
 # #+property: exports results
 
@@ -72,6 +72,7 @@ I want to use:
 - math symbols, say \(a^{2}+b^{2}=c^{2}\)
 - displayed equations, like:
 
+  <<the-equation>>
   #+NAME: the-equation
   \begin{equation}
   a^{2}+b^{2}=c^{2}
@@ -82,6 +83,7 @@ I want to use:
 - theorems, definitions, etc.
 
   #+name: thm-1
+  <<thm-1>>
   #+begin_theorem
   There are infinite prime numbers \(p\).
   #+end_theorem
@@ -105,6 +107,18 @@ I want to use:
   |---+---+---|
   | x | y | z |
   |---+---+---|
+
+* COMMENT Misc
+
+  This block produces a picture of the code:
+  #+begin_src latex :file frac.png :results raw
+  \(
+  \frac{1}{2}
+  \)
+  #+end_src
+
+  #+RESULTS:
+  [[file:frac.png]]
 
 * Resources
 
