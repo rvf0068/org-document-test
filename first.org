@@ -19,6 +19,15 @@ One thing I like about org is that it is rather simple, and the
 documents look clean. I do not like that it seems to change
 constantly and that it is not as universally known as LaTeX.
 
+#+BEGIN_CENTER
+This is stuff to be centered.
+#+END_CENTER
+
+#+BEGIN_COMMENT
+This is an inline comment. It will not be exported, no matter
+what. One can also mark whole subtrees with COMMENT.
+#+END_COMMENT
+
 * Requirements
 
 I want to use:
