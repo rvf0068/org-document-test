@@ -1,3 +1,4 @@
+# -*- org-confirm-babel-evaluate: nil -*-
 #+title: Which is a good format to make documents?
 #+options: toc:nil tex:imagemagick
 # #+property: cache yes 
