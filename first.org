@@ -10,7 +10,8 @@
 
 #+LaTeX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue}
 
-#+HTML_HEAD: <style>.theorem {}
+# see http://www.w3schools.com/css/css_font.asp for more info
+#+HTML_HEAD: <style>.theorem {font-size: 1.5em; color: green; font-family: arial; text-decoration:underline;}
 #+HTML_HEAD: .theorem:before {content: "Theorem: "; font-weight: bold}</style>
 #+HTML_HEAD: <style>.definition {}
 #+HTML_HEAD: .definition:before {content: "Definition: "; font-style: italic; font-weight: bold}</style>
@@ -120,6 +121,21 @@ I want to use:
 
   #+RESULTS:
   [[file:frac.png]]
+
+  #+BEGIN_SRC dot :file example1.png
+    digraph test {
+        size="6,5";
+        home [label = "Hom"];
+        prod [label = "Proucts"];
+        news [label = "News"];
+        cont [label = "Contact"];
+
+        home -> {prod news cont}
+    }
+  #+END_SRC
+
+  #+RESULTS:
+  [[file:example1.png]]
 
 * Resources
 
