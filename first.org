@@ -1,5 +1,7 @@
 #+title: Which is a good format to make documents?
 # #+options: toc:nil tex:imagemagick
+# #+property: cache yes 
+# #+property: exports results
 
 #+latex_header: \usepackage{amsthm}
 #+latex_header: \newtheorem{theorem}{Theorem}
@@ -7,26 +9,37 @@
 
 #+LaTeX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue}
 
+#+HTML_HEAD: <style>.theorem {}
+#+HTML_HEAD: .theorem:before {content: "Theorem: "; font-weight: bold}</style>
+#+HTML_HEAD: <style>.definition {}
+#+HTML_HEAD: .definition:before {content: "Definition: "; font-style: italic; font-weight: bold}</style>
+
 * The problem
 
-I want to have a format that I can convert to ~pdf, html~, and maybe
-~odt~. The formats I know well are
+  I want to have a format that I can convert to ~pdf, html~, and maybe
+  ~odt~. The formats I know well are
 
-- LaTeX
-- org
+  - LaTeX
+  - org
 
-One thing I like about org is that it is rather simple, and the
-documents look clean. I do not like that it seems to change
-constantly and that it is not as universally known as LaTeX.
+  One thing I like about org is that it is rather simple, and the
+  documents look clean. I do not like that it seems to change constantly
+  and that it is not as universally known as LaTeX.
 
-#+BEGIN_CENTER
-This is stuff to be centered.
-#+END_CENTER
+  #+BEGIN_CENTER
+  This is stuff to be centered.
+  #+END_CENTER
 
-#+BEGIN_COMMENT
-This is an inline comment. It will not be exported, no matter
-what. One can also mark whole subtrees with COMMENT.
-#+END_COMMENT
+  #+BEGIN_COMMENT
+  This is an inline comment. It will not be exported, no matter
+  what. One can also mark whole subtrees with COMMENT.
+  #+END_COMMENT
+
+  1. A first item in a list.
+  2. Another item
+     1. With three subparts. This one.
+     2. Another one.
+     3. <<last>> And the last subpart.
 
 * Requirements
 
@@ -72,6 +85,12 @@ I want to use:
   #+begin_theorem
   There are infinite prime numbers \(p\).
   #+end_theorem
+  
+  A definition:
+  #+name: def-closed
+  #+begin_definition
+  A set is /closed/ if its complement is open.
+  #+end_definition
 
 - references, to a bibliographic resource or to another theorem
   previously stated.
@@ -126,7 +145,7 @@ I want to use:
 ** To the equation
 
 We reference equation [[the-equation]] and table [[the-table]] and Theorem
-[[thm-1]] and Figure [[clock]].
+[[thm-1]] and Figure [[clock]]. And also item [[last]].
 
 ** To books
 
@@ -149,13 +168,14 @@ We reference equation [[the-equation]] and table [[the-table]] and Theorem
    #+END_EXAMPLE
 
    #+attr_html: :align center
-   |           | pdf   | html  |
-   |-----------+-------+-------|
-   | figures   | works | works |
-   | equations | works |       |
-   | tables    | works | works |
-   | theorems  | works |       |
-   | biblio    | works | works |
+   |                | pdf   | html  |
+   |----------------+-------+-------|
+   | figures        | works | works |
+   | equations      | works |       |
+   | tables         | works | works |
+   | theorems       | works |       |
+   | biblio         | works | works |
+   | items in lists | works | works |
 
 #+BIBLIOGRAPHY: ./bibliotest plain limit:t
 
