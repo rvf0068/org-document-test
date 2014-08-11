@@ -72,8 +72,8 @@ I want to use:
 - math symbols, say \(a^{2}+b^{2}=c^{2}\)
 - displayed equations, like:
 
-  <<the-equation>>
   #+NAME: the-equation
+  <<the-equation>>
   \begin{equation}
   a^{2}+b^{2}=c^{2}
   \end{equation}
@@ -83,8 +83,8 @@ I want to use:
 - theorems, definitions, etc.
 
   #+name: thm-1
-  <<thm-1>>
   #+begin_theorem
+  <<thm-1>>
   There are infinite prime numbers \(p\).
   #+end_theorem
   
