@@ -219,7 +219,6 @@ We reference equation [[the-equation]] and table [[the-table]] and Theorem
 * COMMENT Local Variables
 
 # Local Variables:
-# eval: (setq org-latex-pdf-process '("xelatex -interaction \
-#                  nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+# org-latex-pdf-process: ("latexmk -xelatex -pdf -silent -f %f")
 # End:
 
