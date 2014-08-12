@@ -8,6 +8,11 @@
 #+latex_header: \newtheorem{theorem}{Theorem}
 #+latex_header: \newtheorem{definition}{Definition}
 
+#+latex_header: \usepackage{fontspec}
+#+latex_header: \setromanfont{Purisa}
+#+latex_header: \setsansfont{Verdana}
+#+latex_header: \setmonofont{Ubuntu Mono}
+
 #+LaTeX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue}
 
 # see http://www.w3schools.com/css/css_font.asp for more info
@@ -209,4 +214,12 @@ We reference equation [[the-equation]] and table [[the-table]] and Theorem
    | items in lists | works | works |
 
 #+BIBLIOGRAPHY: ./bibliotest plain limit:t
+
+
+* COMMENT Local Variables
+
+# Local Variables:
+# eval: (setq org-latex-pdf-process '("xelatex -interaction \
+#                  nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+# End:
 
