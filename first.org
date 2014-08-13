@@ -1,4 +1,3 @@
-# -*- org-confirm-babel-evaluate: nil -*-
 #+title: Which is a good format to make documents?
 #+options: toc:nil tex:imagemagick
 # #+property: cache yes 
@@ -220,5 +219,7 @@ We reference equation [[the-equation]] and table [[the-table]] and Theorem
 
 # Local Variables:
 # org-latex-pdf-process: ("latexmk -xelatex -pdf -silent -f %f")
+# org-confirm-babel-evaluate: nil
+# org-latex-image-default-width: ".5\\linewidth"
 # End:
 
