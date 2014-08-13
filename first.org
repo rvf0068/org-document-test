@@ -102,6 +102,12 @@ I want to use:
   a^{2}+b^{2}=c^{2}
   \end{equation}
 
+- An R code block:
+
+  #+begin_src R :results output graphics :exports results :file img.png
+  hist(rnorm(100))
+  #+END_SRC
+
 * Theorems
 
 - theorems, definitions, etc.
