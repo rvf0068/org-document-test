@@ -75,6 +75,24 @@ I want to use:
         - `a`: test argument
         """
   #+end_src
+
+- more code, using the new syntax introduced at [2014-03-26 Wed]:
+
+
+  #+ATTR_LATEX: :options basicstyle=\itshape
+  #+BEGIN_SRC python
+    def filter_small_local_girth ( L ):
+        i = 0
+        result = []
+        while i < len(L):
+            hasit = (Graph(L[i]).girth()>=7)
+            if not(hasit):
+                result.append(L[i])
+            i = i+1
+            print i, hasit
+        return result
+  #+END_SRC
+
 - math symbols, say \(a^{2}+b^{2}=c^{2}\)
 - displayed equations, like:
 
