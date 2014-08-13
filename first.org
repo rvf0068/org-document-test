@@ -1,5 +1,5 @@
 #+title: Which is a good format to make documents?
-#+options: toc:nil tex:imagemagick
+#+options: toc:t tex:imagemagick
 # #+property: cache yes 
 # #+property: exports results
 
@@ -13,6 +13,9 @@
 #+latex_header: \setmonofont{Ubuntu Mono}
 
 #+LaTeX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue}
+
+#+latex_header: \usepackage{makeidx}
+#+latex_header: \makeindex
 
 # see http://www.w3schools.com/css/css_font.asp for more info
 #+HTML_HEAD: <style>.theorem {font-size: 1.5em; color: green; font-family: arial; text-decoration:underline;}
@@ -66,6 +69,8 @@ I want to use:
 
 * Other requirements
 
+#+index: code
+
 - code, say
   #+begin_src python
     def test(a):
@@ -109,6 +114,8 @@ I want to use:
   #+END_SRC
 
 * Theorems
+
+#+index: theorems
 
 - theorems, definitions, etc.
 
@@ -237,7 +244,7 @@ We reference equation [[the-equation]] and table [[the-table]] and Theorem
    | items in lists | works | works |
 
 #+BIBLIOGRAPHY: ./bibliotest plain limit:t
-
+#+latex: \printindex
 
 * COMMENT Local Variables
 
