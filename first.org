@@ -82,8 +82,6 @@ I want to use:
   #+end_src
 
 - more code, using the new syntax introduced at [2014-03-26 Wed]:
-
-
   #+ATTR_LATEX: :options basicstyle=\itshape
   #+BEGIN_SRC python
     def filter_small_local_girth ( L ):
@@ -107,11 +105,18 @@ I want to use:
   a^{2}+b^{2}=c^{2}
   \end{equation}
 
-- An R code block:
+- An R graphic:
 
-  #+begin_src R :results output graphics :exports results :file img.png
+  #+name: rcode
+  #+begin_src R :results output graphics :exports both :file img.png
   hist(rnorm(100))
   #+END_SRC
+
+  #+caption: R graphic
+  #+attr_latex: :width 6cm
+  #+attr_html: :width 300 :alt R code :align center
+  #+RESULTS: rcode
+  [[file:img.png]]
 
 * Theorems
 
