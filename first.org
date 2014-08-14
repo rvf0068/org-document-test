@@ -108,7 +108,7 @@ I want to use:
 - An R graphic:
 
   #+name: rcode
-  #+begin_src R :results output graphics :exports both :file img.png
+  #+begin_src R :results output graphics :exports results :file img.png
   hist(rnorm(100))
   #+END_SRC
 
@@ -117,6 +117,28 @@ I want to use:
   #+attr_html: :width 300 :alt R code :align center
   #+RESULTS: rcode
   [[file:img.png]]
+
+- Graphviz
+
+  #+BEGIN_SRC dot :cmd dot :cmdline -Tpng :file graphviz.png :exports both :cache yes
+    digraph "foo" {
+      rankdir=LR;
+      params -> builders;
+      builders -> objects;
+      objects -> file;
+    }
+  #+END_SRC
+
+- A code listing
+
+  #+name: latex-code
+  #+caption: A \LaTeX{} listing
+  #+attr_latex: :options numbers=left, captionpos=b
+  #+BEGIN_SRC latex :exports code 
+    \begin{equation}
+      a^{2}+b^{2}=c^{2}
+    \end{equation}
+  #+END_SRC
 
 * Theorems
 
@@ -216,7 +238,8 @@ I want to use:
 ** To the equation
 
 We reference equation [[the-equation]] and table [[the-table]] and Theorem
-[[thm-1]] and Figure [[clock]]. And also item [[last]].
+[[thm-1]] and Figure [[clock]]. And also item [[last]]. And to a named code block:
+Listing [[latex-code]].
 
 ** To books
 
