@@ -144,6 +144,7 @@ I want to use:
   #+END_SRC
 
 - A tikz picture, that exports well to both \LaTeX{} and HTML.
+  # We need the option :width "", otherwise the export is munged.
 
   #+name: test-tikz
   #+header: :imagemagick yes :iminoptions -density 300 -resize 400
@@ -171,7 +172,6 @@ I want to use:
   #+results: test-tikz
 
 - And another, this time with caption. See Figures [[diamond]] and [[clock]].
-  # We need the option :width "", otherwise the export is munged.
 
   #+name: diamond
   #+header: :iminoptions -density 600 -resample 100x100
