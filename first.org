@@ -110,6 +110,9 @@ I want to use:
 
 - An R graphic:
 
+  Apparently, R can export to ~pdf~, see:
+  http://article.gmane.org/gmane.emacs.orgmode/90466
+
   #+name: rcode
   #+begin_src R :results output graphics :exports results :file img.png
   hist(rnorm(100))
@@ -185,7 +188,6 @@ I want to use:
   #+caption: A diamond!
   #+attr_latex: :float t :width ""
   #+results: diamond
-
 
 * Theorems
 
