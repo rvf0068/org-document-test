@@ -72,6 +72,14 @@ I want to use:
   OK. Also, with a caption, the image is centered both in LaTeX and
   HTML export.
 
+  Images can have a caption and not be centered in LaTeX, see
+  [[http://orgmode.org/w/?p=org-mode.git;a=commitdiff;h=096f4287a60d04470e0a71ea988816d1c3071ccc][orgmode.org Git]]. 
+
+  #+name: clock2
+  #+caption: A test image not centered
+  #+attr_latex: :center nil :width 5cm
+  [[./clock.png]]
+
 * Other requirements
 
 ** Code
