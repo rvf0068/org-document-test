@@ -2,8 +2,8 @@
 #+options: toc:t 
 
 # #+options: tex:imagemagick
-# #+property: cache yes 
-# #+property: exports results
+#+property: cache yes
+#+property: exports results
 
 #+LATEX_HEADER: \usepackage{tikz}
 #+latex_header: \usepackage{amsthm}
@@ -19,6 +19,8 @@
 
 #+latex_header: \usepackage{makeidx}
 #+latex_header: \makeindex
+
+#+latex_header: \usepackage{listings}
 
 # see http://www.w3schools.com/css/css_font.asp for more info
 #+HTML_HEAD: <style>.theorem {font-size: 1.5em; color: green; font-family: arial; text-decoration:underline;}
@@ -72,6 +74,8 @@ I want to use:
 
 * Other requirements
 
+** Code
+
 #+index: code
 
 - code, say
@@ -83,6 +87,10 @@ I want to use:
         - `a`: test argument
         """
   #+end_src
+
+	#+RESULTS:
+	: None
+
 
 - more code, using the new syntax introduced at [2014-03-26 Wed]:
   #+ATTR_LATEX: :options basicstyle=\itshape
@@ -99,14 +107,32 @@ I want to use:
         return result
   #+END_SRC
 
+	#+RESULTS:
+	: None
+
+
+- A code listing with caption
+
+  #+caption: A \LaTeX{} listing
+  #+attr_latex: :options numbers=left, captionpos=b
+  #+name: latex-code
+  #+BEGIN_SRC latex :exports code 
+    \begin{equation}
+      a^{2}+b^{2}=c^{2}
+    \end{equation}
+  #+END_SRC
+
+** Math
+
 - math symbols, say \(a^{2}+b^{2}=c^{2}\)
 - displayed equations, like:
 
   #+NAME: the-equation
-  <<the-equation>>
   \begin{equation}
   a^{2}+b^{2}=c^{2}
   \end{equation}
+
+** R graphics
 
 - An R graphic:
 
@@ -124,6 +150,8 @@ I want to use:
   #+RESULTS: rcode
   [[file:img.png]]
 
+** Graphviz
+
 - Graphviz
 
   #+BEGIN_SRC dot :cmd dot :cmdline -Tpng :file graphviz.png :exports both :cache yes
@@ -135,19 +163,16 @@ I want to use:
     }
   #+END_SRC
 
-- A code listing
+    #+RESULTS[6d9e47adf125517b3e395a4143174b0f35bae46c]:
+    [[file:graphviz.png]]
 
-  #+name: latex-code
-  #+caption: A \LaTeX{} listing
-  #+attr_latex: :options numbers=left, captionpos=b
-  #+BEGIN_SRC latex :exports code 
-    \begin{equation}
-      a^{2}+b^{2}=c^{2}
-    \end{equation}
-  #+END_SRC
+** Tikz
+
+*** 
 
 - A tikz picture, that exports well to both \LaTeX{} and HTML.
-  # We need the option :width "", otherwise the export is munged.
+  # We need the option :width "", otherwise the a default value for
+  # width of latex images is used. See org-latex-image-default-width
 
   #+name: test-tikz
   #+header: :imagemagick yes :iminoptions -density 300 -resize 400
@@ -172,22 +197,29 @@ I want to use:
   
   #+attr_latex: :width ""
   #+attr_html: :width 400 :alt test-tikz :align center
-  #+results: test-tikz
+  #+RESULTS[10459562657201717ce8d59bcee5b6a75e3032ac]: test-tikz
+  [[file:test-tikz.png]]
 
-- And another, this time with caption. See Figures [[diamond]] and [[clock]].
+
+*** 
+
+- And another, this time with caption. And references: see Figures [[diamond]] and [[clock]].
 
   #+name: diamond
-  #+header: :iminoptions -density 600 -resample 100x100
+  #+header: :imagemagick yes :iminoptions -density 300 -resize 400
+  #+header: :packages '(("" "tikz")) :border 1pt
   #+header: :file (by-backend (latex "diamond.tikz") (beamer "diamond.tikz") (t "diamond.png"))
   #+begin_src latex :results raw file
     \begin{tikzpicture}
       \draw (1,0) -- (0,1) -- (-1,0) -- (0,-1) -- cycle;
     \end{tikzpicture}
   #+end_src
-  
+
+  #+name: diamond
   #+caption: A diamond!
   #+attr_latex: :float t :width ""
   #+results: diamond
+  [[file:diamond.png]]
 
 * Theorems
 
@@ -197,7 +229,6 @@ I want to use:
 
   #+name: thm-1
   #+begin_theorem
-  <<thm-1>>
   There are infinite prime numbers \(p\).
   #+end_theorem
   
@@ -208,7 +239,8 @@ I want to use:
   #+end_definition
 
 - references, to a bibliographic resource or to another theorem
-  previously stated.
+  previously stated. Like: see Theorem [[thm-1]] and Definition [[def-closed]].
+
 - tables, say:
 
   #+caption: This is a test table
@@ -221,15 +253,18 @@ I want to use:
   | x | y | z |
   |---+---+---|
 
-* COMMENT Misc
+* Misc
 
   This block produces a picture of the code:
+
+  #+header: :imagemagick yes :border 1pt
   #+begin_src latex :file frac.png :results raw
   \(
   \frac{1}{2}
   \)
   #+end_src
 
+  #+attr_latex: :width ""
   #+RESULTS:
   [[file:frac.png]]
 
@@ -237,7 +272,7 @@ I want to use:
     digraph test {
         size="6,5";
         home [label = "Hom"];
-        prod [label = "Proucts"];
+        prod [label = "Products"];
         news [label = "News"];
         cont [label = "Contact"];
 
@@ -292,7 +327,7 @@ Listing [[latex-code]]. And Figure [[diamond]].
 
 ** To books
 
-   We cite [[cite:posetfiber]] and [[cite:MR86d:00001]]. Let us also cite [[cite:MR2522486]].
+   We cite [[cite:posetfiber]]. Let us also cite [[cite:MR2522486]].
 
    Note that to export bibliographies to html, one has to install
    ~bibtex2html~. For ~bibtex2html~ to work, we need to add
@@ -305,9 +340,9 @@ Listing [[latex-code]]. And Figure [[diamond]].
    ignored]].
 
 ** State of the references
-   Currently, on [2014-08-10 Sun], with org-version:
+   Currently, on [2016-10-02 Sun], with org-version:
    #+BEGIN_EXAMPLE
-     Org-mode version 8.3beta (release_8.3beta-211-gb3fbd3 @ /home/rafael/.emacs.d/site-lisp/org-mode/lisp/)
+   Org-mode version 8.3.6 (release_8.3.6-1187-geda8ac @ /home/rafael/.emacs.d/site-lisp/org-mode/lisp/)
    #+END_EXAMPLE
 
    #+attr_html: :align center
@@ -319,6 +354,7 @@ Listing [[latex-code]]. And Figure [[diamond]].
    | theorems       | works |       |
    | biblio         | works | works |
    | items in lists | works | works |
+   | code listings  |       | works  |
 
 #+BIBLIOGRAPHY: ./bibliotest plain limit:t
 #+latex: \printindex
