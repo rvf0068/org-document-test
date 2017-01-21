@@ -82,6 +82,18 @@ I want to use:
   #+attr_latex: :center nil :width 5cm
   [[./clock.png]]
 
+
+  Centering two images side by side. See [[http://www.mail-archive.com/emacs-orgmode@gnu.org/msg110539.html][{O} Centering side-by-side
+  images in latex/pdf export]].
+
+#+BEGIN_CENTER
+#+ATTR_LaTeX: :height 0.2\textwidth :center nil
+[[./clock.png]]
+#+ATTR_LaTeX: :height 0.3\textwidth :center nil
+[[./clock.png]]
+#+END_CENTER
+
+
 * Other requirements
 
 ** Code
