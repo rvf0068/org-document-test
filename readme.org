@@ -5,6 +5,8 @@
 #+property: cache yes
 #+property: exports results
 
+#+LATEX_COMPILER: xelatex
+
 #+LATEX_HEADER: \usepackage{tikz}
 #+latex_header: \usepackage{amsthm}
 #+latex_header: \newtheorem{theorem}{Theorem}
@@ -276,7 +278,7 @@ I want to use:
   #+RESULTS:
   [[file:frac.png]]
 
-  #+BEGIN_SRC dot :file example1.png
+  #+BEGIN_SRC dot :file example1.png :exports result
     digraph test {
         size="6,5";
         home [label = "Hom"];
@@ -370,7 +372,6 @@ Listing [[latex-code]]. And Figure [[diamond]].
 * COMMENT Local Variables
 
 # Local Variables:
-# org-latex-pdf-process: ("latexmk -xelatex -pdf -silent -f %f")
 # org-confirm-babel-evaluate: nil
 # org-latex-image-default-width: ".5\\linewidth"
 # End:
