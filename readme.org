@@ -293,6 +293,31 @@ I want to use:
   #+RESULTS:
   [[file:example1.png]]
 
+
+* References in beamer
+
+  The following org file when exported to beamer, contains a reference
+  in one slide to other. See [[http://www.mail-archive.com/emacs-orgmode@gnu.org/msg109913.html][user labels in beamer export]].
+
+  #+BEGIN_SRC org
+,#+TITLE: LaTeX export minimal test
+
+,* Intro
+  :PROPERTIES:
+  :CUSTOM_ID: introduction
+  :END:
+This is the first slide.
+
+,* Summary
+As we saw on slide [[#introduction][intro]], this is interesting.
+
+,* COMMENT Local Variables
+
+# Local Variables:
+# org-latex-prefer-user-labels: t
+# End:
+  #+END_SRC
+
 * Resources
 
 ** In blogs
